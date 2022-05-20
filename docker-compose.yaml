@@ -5,13 +5,12 @@ services:
   mynode:
     build: 
       context: ./app
+      dockerfile: Dockerfile.prod
     image: mynode:latest
     container_name: mynode
     entrypoint: dockerize -wait tcp://db:3306 -timeout 20s node index.js
     networks: 
       - node-network
-    volumes: 
-      - ./app/src:/app
     tty: true
     depends_on: 
        - db

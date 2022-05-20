@@ -29,18 +29,18 @@ scomp:
 	docker-compose stop
 
 test-post:
-	curl --request POST localhost:3000/people
+	curl --request POST localhost:8080/people
 	echo
-	curl -d '[{"name":"persike"}, {"name":"thorSM"}]' -H "Content-Type: application/json" -X POST http://localhost:3000/people
+	curl -d '[{"name":"persike"}, {"name":"thorSM"}]' -H "Content-Type: application/json" -X POST http://localhost:8080/people
 	echo
-	curl -d '{ "name": "persike", "age": "18" }' -H "Content-Type: application/json" -X POST http://localhost:3000/people
+	curl -d '{ "name": "persike", "age": "18" }' -H "Content-Type: application/json" -X POST http://localhost:8080/people
 	echo
-	curl -d '{}' -H "Content-Type: application/json" -X POST http://localhost:3000/people
+	curl -d '{}' -H "Content-Type: application/json" -X POST http://localhost:8080/people
 	echo
-	curl -d '[]' -H "Content-Type: application/json" -X POST http://localhost:3000/people
+	curl -d '[]' -H "Content-Type: application/json" -X POST http://localhost:8080/people
 
 test-get:
-	curl localhost:3000/
+	curl localhost:8080/
 	echo
-	curl localhost:3000/people
+	curl localhost:8080/people
 	echo
