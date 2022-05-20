@@ -5,6 +5,13 @@ const port = 3000
 
 app.use(express.json())
 
+const initdb = () => {
+    const conn = new db();
+    conn.createifnontexists();
+}
+
+initdb();
+
 app.get('/', async (req,res) => {
     
     conn = new db()
