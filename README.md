@@ -23,14 +23,9 @@ Executar o conjunto de containers utilizando composer:
 docker-compose up -d
 ```
 
-A primeira vez, será necessário criar o banco manualmente acessando o container interativamente para isso. 
-Utilizar o script disponível em ./app/src/createdb.sql.
-```sh
-docker exec -it db bash
-mysql -uroot -p mysql < createdb.sql
-(Password) - root
-```
 ## Release History
 
+* 0.0.2
+   * No longer needs to create database manually.
 * 0.0.1
     * Project initialized and finished.
