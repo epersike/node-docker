@@ -24,7 +24,7 @@ app.get('/', async (req,res) => {
         resp_aux.push(`<li>${peep.name}</li>`);
     }))
 
-    res.send('<h1>Full Cycle</h1><p><ul>' + resp_aux.join('') + '<ul>')
+    res.send('<h1>Full Cycle Rocks!</h1><p><ul>' + resp_aux.join('') + '<ul>')
 })
 
 app.post('/people', (req, res) => {
