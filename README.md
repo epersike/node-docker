@@ -1,4 +1,4 @@
-# Nome do produto
+# MyNode FullCycle
 Projeto de estudos - Desafio NGINX Proxy Reverso + Aplicação NodeJS + DB MySQL.
 
 ## Descrição
@@ -20,12 +20,14 @@ Get started Docker - [Click here](https://docs.docker.com/get-started/)
 
 Executar o conjunto de containers utilizando composer:
 ```sh
-docker-compose up -d
+docker compose up -d
 ```
 
 ## Release History
 
+* 0.0.3 - 11/02/2024
+   * Removed MYSQL_DATABASE from docker-compose.yml which was creating default database "nodedb", preventing the db.js file to create the database with associated tables.
 * 0.0.2
    * No longer needs to create database manually.
 * 0.0.1
-    * Project initialized and finished.
+    * Project initialized.
